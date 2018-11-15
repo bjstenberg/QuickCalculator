@@ -1,0 +1,16 @@
+Start: // I KNOOOW this is out of date, but it keeps it in the console and lets you keep trying. This can also be made with a loop. Need to learn that first.
+        int numOne;
+        int numTwo;
+
+        Console.Write("Please put in a number you would like to divide: ");
+        numOne = Convert.ToInt32(Console.ReadLine());
+
+        Console.Write("Please input another number to divide with: ");
+        numTwo = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("You have choosen to divide " + numOne + " with " + numTwo + "." + " \nThe result of these numbers divided are: " + numOne / numTwo);
+
+        //wait for user to press key and start all over.
+        Console.ReadLine();
+        Console.WriteLine();
+        goto Start; // goto Start makes it so that you go back to the beginning of the program afterpressing a random key.
