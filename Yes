@@ -1,7 +1,13 @@
-Start: // I KNOOOW this is out of date, but it keeps it in the console and lets you keep trying. This can also be made with a loop. Need to learn that first.
+        
+         class MainClass
+    {
+        public static void Main(string[] args)
+        {
         int numOne;
         int numTwo;
+        bool repeat = true;
 
+        while(repeat){
         Console.Write("Please put in a number you would like to divide: ");
         numOne = Convert.ToInt32(Console.ReadLine());
 
@@ -9,8 +15,17 @@ Start: // I KNOOOW this is out of date, but it keeps it in the console and lets 
         numTwo = Convert.ToInt32(Console.ReadLine());
 
         Console.WriteLine("You have choosen to divide " + numOne + " with " + numTwo + "." + " \nThe result of these numbers divided are: " + numOne / numTwo);
-
+        
+        Console.WriteLine("Would you like to try another calculation? Y/N");
+        string go = Console.ReadLine();
+        if (go == "Y" || go == "y") {
+                repeat = true;
+                } else {
+                repeat = false; 
+                }
+        } 
         //wait for user to press key and start all over.
+        Console.WriteLine("Press any key");
         Console.ReadLine();
-        Console.WriteLine();
-        goto Start; // goto Start makes it so that you go back to the beginning of the program afterpressing a random key.
+    }
+}
